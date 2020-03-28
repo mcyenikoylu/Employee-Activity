@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AktiviteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AktiviteEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="S_ZamanlanmisGorevler" ReturnType="Collection(AktiviteModel.S_ZamanlanmisGorevler_Result)" />
+    <FunctionImport Name="S_Mail" ReturnType="Collection(AktiviteModel.S_Mail_Result)">
+      <Parameter Name="Durum" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="U_MailGonderildi">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="S_ZamanlanmisGorevler_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Baslik" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Aciklama" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="GorevTipi_TipID2" Nullable="true" />
+    <Property Type="DateTime" Name="SistemKayitTarihiSaati" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="OlusturanDanismanID" Nullable="true" />
+    <Property Type="String" Name="Saniye" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Dakika" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Saat" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Gun" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Ay" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Hafta" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Yil" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JobAdi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProcedureAdi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="S_Mail_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="GonderilenMailAdresi" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="HTML" Nullable="true" />
+    <Property Type="Boolean" Name="Durum" Nullable="true" />
+    <Property Type="DateTime" Name="GonderimTarihi" Nullable="true" Precision="23" />
+    <Property Type="String" Name="GonderenMailAdresi" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Konu" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PromotionName" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="EkteDosya" Nullable="true" />
+    <Property Type="String" Name="EkteDosyaYolu" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="OlusturmaTarihi" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="GonderenDanismanID" Nullable="true" />
+  </ComplexType>
+</Schema>
