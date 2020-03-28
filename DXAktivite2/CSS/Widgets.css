@@ -1,0 +1,82 @@
+﻿.widgetPanel
+{
+	background: #F9F9FA;
+	border: solid 1px #D3D6DA;
+	padding: 12px 15px 9px;
+	margin: 0 0 5px 0;
+	height: 44px;
+	
+	-moz-box-shadow:inset 0px 1px 4px rgba(0, 0, 0, 0.117188);
+    -webkit-box-shadow:inset 0px 1px 4px rgba(0, 0, 0, 0.117188);
+    box-shadow:inset 0px 1px 4px rgba(0, 0, 0, 0.117188);	
+	
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.widgetPanel img 
+{
+	margin-right: 11px;
+}
+
+.widgetPanel .disabled
+{
+	-moz-opacity: 0.2;
+	filter:alpha(opacity=20);
+	opacity: 0.2;
+	
+	cursor: default !important;
+}
+
+.leftZone,
+.rightZone
+{
+	float: left;
+}
+.leftZone 
+{
+	margin-right: 3px;
+}
+
+/* DateTime widget */
+.dateContainer,
+.timeContainer
+{
+	width: 100%;
+	text-align: center;
+}
+
+/* Weather widget */
+.dayUCContainer 
+{
+	text-align: center;
+}
+.dayList 
+{
+	float: left;
+	
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+.dayListItem 
+{
+	float: left;
+	margin: 0 5px 5px;
+}
+.todayImg 
+{
+	width: 24px;
+	height: 24px;
+}
+
+/* Mail widget */
+.mailFolders 
+{
+	list-style-type:circle;
+	padding: 0 0 0 20px;
+}
+.mailFolders li 
+{
+	margin: 4px 0;
+}

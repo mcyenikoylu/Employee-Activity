@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="DXAktivite2.Global_asax" Language="C#" %>

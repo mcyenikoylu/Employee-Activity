@@ -1,0 +1,103 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.master.cs" Inherits="DXAktivite2.RootMaster" %>
+
+<%-- DXCOMMENT: Page Root.master is a master page that contains the root layout (it includes Header, Cental Area, and Footer) --%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>Route - Business Management System</title>
+    <meta name="copyright" content="TEC Solutions">
+    <meta name="author" content="Cenk Yeniköylü">
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+</head>
+<body runat="server" id="Body">
+    <form id="form1" runat="server">
+        <dx:ASPxPanel ID="HeaderPane" runat="server" FixedPosition="WindowTop" ClientInstanceName="headerPane" CssClass="headerPane" Collapsible="true">
+            <SettingsAdaptivity CollapseAtWindowInnerWidth="500" />
+            <Styles>
+                <Panel CssClass="panel"></Panel>
+                <ExpandedPanel CssClass="expandedPanel"></ExpandedPanel>
+                <ExpandBar CssClass="bar"></ExpandBar>
+            </Styles>
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                        <div class="headerTop">
+                            <div class="templateTitle">
+                                <a id="TitleLink" href="~/" runat="server">Route</a>
+                            </div>
+                            <div class="loginControl">
+                                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                    <AnonymousTemplate>
+                                        <a href="~/Account/Login2.aspx" runat="server" id="loginLink">Giriþ Yap</a> 
+                                       <%-- | 
+                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Kayýt Ol</a>--%>
+                                    </AnonymousTemplate>
+                                    <LoggedInTemplate>
+                                        Hoþgeldin <span class="bold">
+                                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                                        </span>! [
+                                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" 
+                                            LogoutAction="Redirect" LogoutText="Çýkýþ Yap" OnLoggedOut="HeadLoginStatus_LoggedOut"
+                                            LogoutPageUrl="~/" />
+                                        ]
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </div>
+                        </div>
+                        <div class="headerMenu">
+                            <%-- DXCOMMENT: Configure the header menu --%>
+
+<%--<dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%">
+    <Items>
+        <dx:MenuItem Text="Aktivite"></dx:MenuItem>
+        <dx:MenuItem Text="CRM"></dx:MenuItem>
+        <dx:MenuItem Text="Item 3"></dx:MenuItem>
+        <dx:MenuItem Text="Item 4"></dx:MenuItem>
+    </Items>
+</dx:ASPxMenu>--%>
+
+<dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" 
+    ItemAutoWidth="False" Width="100%" DataSourceID="XmlDataSourceHeader">
+</dx:ASPxMenu>
+
+                        </div>
+                </dx:PanelContent>
+            </PanelCollection>
+            <ExpandBarTemplate>
+                <div class="templateTitle">
+                    <a id="TitleLink" href="~/" runat="server">Route</a>
+                </div>
+            </ExpandBarTemplate>
+        </dx:ASPxPanel>
+
+        <script type="text/javascript">
+            function updateHeaderMenuOrientation(){
+                var orientation = headerPane.IsExpandable() ? 'Vertical' : 'Horizontal';
+                if(orientation !== headerMenu.GetOrientation()) 
+                    headerMenu.SetOrientation(orientation);
+            }
+        </script>
+
+        <dx:ASPxGlobalEvents runat="server">
+            <ClientSideEvents ControlsInitialized="updateHeaderMenuOrientation" 
+                BrowserWindowResized="updateHeaderMenuOrientation" />
+        </dx:ASPxGlobalEvents>
+
+
+        <dx:ASPxPanel ID="MainPane" runat="server" CssClass="mainContentPane">
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                    <asp:ContentPlaceHolder ID="Content" runat="server" />
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+
+            
+<%-- DXCOMMENT: Configure a datasource for the header menu --%>
+<asp:XmlDataSource ID="XmlDataSourceHeader" runat="server" DataFile="~/App_Data/TopMenu.xml"
+    XPath="/items/*"></asp:XmlDataSource>
+
+    </form>
+</body>
+</html>

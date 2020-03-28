@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXAktivite2", "DXAktivite2\DXAktivite2.csproj", "{E5CF41BA-BA9D-4046-9993-777A66EC2398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteServer", "RouteServer\RouteServer.csproj", "{3CC3ADA3-196E-4AEA-A89E-51DAA37EFF46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5CF41BA-BA9D-4046-9993-777A66EC2398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5CF41BA-BA9D-4046-9993-777A66EC2398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5CF41BA-BA9D-4046-9993-777A66EC2398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5CF41BA-BA9D-4046-9993-777A66EC2398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CC3ADA3-196E-4AEA-A89E-51DAA37EFF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CC3ADA3-196E-4AEA-A89E-51DAA37EFF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CC3ADA3-196E-4AEA-A89E-51DAA37EFF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CC3ADA3-196E-4AEA-A89E-51DAA37EFF46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D730D53D-B810-4F5F-8F4D-52D131E34D0D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mcy.visualstudio.com/
+		SccProjectUniqueName0 = RouteServer\\RouteServer.csproj
+		SccProjectName0 = RouteServer
+		SccLocalPath0 = RouteServer
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = DXAktivite2\\DXAktivite2.csproj
+		SccProjectName2 = DXAktivite2
+		SccLocalPath2 = DXAktivite2
+	EndGlobalSection
+EndGlobal

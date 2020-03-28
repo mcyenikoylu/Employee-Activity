@@ -1,0 +1,27 @@
+﻿.pcmCellCaption {
+	white-space: nowrap;
+	padding-top: 5px;
+    vertical-align: top;
+}
+.pcmCellText {
+	padding-left: 10px;
+	padding-top: 2px;
+}
+.pcmCheckBox {
+	padding-left: 6px;
+	padding-bottom: 10px;
+}
+.pcmCreateAccount {
+	text-align: right;
+	padding-top: 8px;
+	padding-bottom: 4px;
+}
+.pcmButton {
+	padding-top: 10px;
+	padding-bottom: 0px;
+    padding-left:10px; /*kaydet buttpnu yanındaki kalan boşluk için koydum. 02.02.2017 -mcy*/
+}
+.pcmSideSpacer {
+	width: 60px;
+	height: 1px;
+}

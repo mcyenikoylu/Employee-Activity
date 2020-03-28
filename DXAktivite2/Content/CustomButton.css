@@ -1,0 +1,12 @@
+﻿/* BlueBall button */
+.blueBall {
+    background-image: url(../Images/BlueBall.png);
+    width: 44px;
+    height: 44px;
+}
+.blueBallHottracked {
+    background-position: -44px 0px;
+}
+.blueBallPressed {
+    background-position: -88px 0px;
+}

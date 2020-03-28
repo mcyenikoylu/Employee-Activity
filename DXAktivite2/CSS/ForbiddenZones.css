@@ -1,0 +1,16 @@
+﻿.verticalZone  {
+	float: left;
+	margin-left: 3px;
+}
+.verticalZone.first 
+{
+	margin: 0;
+}
+.horizontalZone 
+{
+	margin-top: 3px;
+}
+.zoneContainer 
+{
+	padding-left: 106px;
+}

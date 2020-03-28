@@ -1,0 +1,58 @@
+<%@ Master Language="C#" MasterPageFile="~/Root.master" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="DXAktivite2.MainMaster" %>
+
+<%-- DXCOMMENT: Page Main.master is a master page that contains central area layout --%>
+<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
+        <dx:ASPxPanel ID="LeftPane" runat="server" FixedPosition="WindowLeft" ClientInstanceName="leftPane" CssClass="leftPane" Collapsible="true">
+            <SettingsAdaptivity CollapseAtWindowInnerWidth="1023" />
+            <Styles>
+                <Panel CssClass="panel"></Panel>
+            </Styles>
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                        <div class="leftPanel">
+                            <%-- DXCOMMENT: Configure the left panel's ASPxNavBar --%>
+<%--<dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%">
+    <Border BorderWidth="0px" />
+    <Paddings Padding="0px" />
+    <Groups>
+        <dx:NavBarGroup Text="Aktivite Ýþlemleri">
+            <Items>
+                <dx:NavBarItem Text="Planlanmýþ Aktivitelerim"></dx:NavBarItem>
+                <dx:NavBarItem Text="Aktvite Giriþlerim"></dx:NavBarItem>
+                <dx:NavBarItem Text="Raporlarým"></dx:NavBarItem>
+            </Items>
+        </dx:NavBarGroup>
+        <dx:NavBarGroup Text="Yönetim Ýþlemleri">
+            <Items>
+                <dx:NavBarItem Text="Aktivite Planlama"></dx:NavBarItem>
+                <dx:NavBarItem Text="Tanýmlama Ýþlemleri"></dx:NavBarItem>
+                <dx:NavBarItem Text="Fatura Ýþlemleri"></dx:NavBarItem>
+            </Items>
+        </dx:NavBarGroup>
+        <dx:NavBarGroup Text="Raporlar">
+            <Items>
+                <dx:NavBarItem Text="Rapor 1"></dx:NavBarItem>
+                <dx:NavBarItem Text="Rapor 2"></dx:NavBarItem>
+                <dx:NavBarItem Text="Rapor 3"></dx:NavBarItem>
+            </Items>
+        </dx:NavBarGroup>
+    </Groups>
+</dx:ASPxNavBar>--%>
+<dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%" DataSourceID="XmlDataSourceLeft">
+    <Border BorderWidth="0px" />
+    <Paddings Padding="0px" />
+</dx:ASPxNavBar>
+                        </div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+
+        <div class="contentPane">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+<%-- DXCOMMENT: Configure a datasource for the left panel's ASPxNavBar --%>
+<asp:XmlDataSource ID="XmlDataSourceLeft" runat="server" DataFile="~/App_Data/SideMenu.xml"
+    XPath="/menu/*"></asp:XmlDataSource>            
+
+</asp:Content>
