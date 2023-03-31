@@ -1,5 +1,5 @@
-# Employee-Activity
-2016 Danisman personel aktivite girişleri projem 
+# SAP Employee Jobs Activity Management Portal
+Advisor employees job activity entries my project (since 2016)
 
 #screenshots
 ![aktivitedestekraporu1](https://user-images.githubusercontent.com/12815851/96658903-6783cd80-134e-11eb-85b7-9c85ab2ac7c8.JPG)
